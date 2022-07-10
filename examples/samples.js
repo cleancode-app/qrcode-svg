@@ -2,7 +2,6 @@ var QRCode = require('../lib/qrcode.js');
 
 //Sample 1
 var qrcode = new QRCode("Hello World!");
-qrcode.save("sample-1.svg");
 
 //Sample 2
 var qrcode = new QRCode({
@@ -15,9 +14,6 @@ var qrcode = new QRCode({
   ecl: "M"
 });
 
-qrcode.save("sample-2.svg", function(error) {
-  if (error) return console.error(error.message);
-});
 
 //Sample 3
 var qrcode = new QRCode({
@@ -32,7 +28,3 @@ var qrcode = new QRCode({
 var svg = qrcode.svg();
 console.log(svg);
 
-qrcode.save("sample-3.svg", function(error) {
-  if (error) return console.error(error.message);
-  console.log("QR Code saved!");
-});
